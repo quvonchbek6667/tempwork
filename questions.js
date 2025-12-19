@@ -1,41 +1,6 @@
 const questions = {
             "level 1": [
-  { "Question": "shu, o’sha", "RightAnswer": "тот", "options": ["wherever","nowhere","anymore"] },
-  { "Question": "bo'lmoq", "RightAnswer": "быть", "options": ["what","which","mine"] },
-  { "Question": "va", "RightAnswer": "и", "options": ["a","the","wherever"] },
-  { "Question": "ning", "RightAnswer": "из", "options": ["one","second","master"] },
-  { "Question": "ga", "RightAnswer": "к", "options": ["till","except","until"] },
-  { "Question": "bir", "RightAnswer": "один", "options": ["the","wherever","nowhere"] },
-  { "Question": "da, ichida", "RightAnswer": "в", "options": ["of","one","second"] },
-  { "Question": "ega bo'lmoq", "RightAnswer": "иметь", "options": ["be","what","which"] },
-  { "Question": "u (narsa yoki hayvon)", "RightAnswer": "оно", "options": ["plus","versus","to"] },
-  { "Question": "sen, siz", "RightAnswer": "ты", "options": ["it","plus","versus"] },
-  { "Question": "u (o'gil bola)", "RightAnswer": "он", "options": ["you","it","plus"] },
-  { "Question": "uchun", "RightAnswer": "для", "options": ["in","of","one"] },
-  { "Question": "ular", "RightAnswer": "они", "options": ["he","you","it"] },
-  { "Question": "emas", "RightAnswer": "не", "options": ["cool","tender","pale"] },
-  { "Question": "o'sha, shu", "RightAnswer": "тот", "options": ["than","while","whilst"] },
-  { "Question": "biz", "RightAnswer": "мы", "options": ["they","he","you"] },
-  { "Question": "da, ustida", "RightAnswer": "на", "options": ["for","in","of"] },
-  { "Question": "bilan", "RightAnswer": "с", "options": ["on","for","in"] },
-  { "Question": "bu", "RightAnswer": "это", "options": ["either","least","enough"] },
-  { "Question": "men", "RightAnswer": "я", "options": ["we","they","he"] },
-  { "Question": "qilmoq", "RightAnswer": "делать", "options": ["have","be","what"] },
-  { "Question": "kabi", "RightAnswer": "как", "options": ["hence","otherwise","yet"] },
-  { "Question": "da, atrofida", "RightAnswer": "у", "options": ["with","on","for"] },
-  { "Question": "u (qiz bola)", "RightAnswer": "она", "options": ["I","we","they"] },
-  { "Question": "lekin", "RightAnswer": "но", "options": ["and","a","the"] },
-  { "Question": "dan", "RightAnswer": "из", "options": ["at","with","on"] },
-  { "Question": "tomonidan", "RightAnswer": "кем", "options": ["from","at","with"] },
-  { "Question": "bo'ladi", "RightAnswer": "будет", "options": ["hello","hi","each"] },
-  { "Question": "yoki", "RightAnswer": "или", "options": ["but","and","a"] },
-  { "Question": "aytmoq", "RightAnswer": "сказать", "options": ["do","have","be"] },
-  { "Question": "bormoq", "RightAnswer": "идти", "options": ["say","do","have"] },
-  { "Question": "shuning uchun", "RightAnswer": "поэтому", "options": ["badly","abroad","apart"] },
-  { "Question": "barcha", "RightAnswer": "все", "options": ["this","either","least"] },
-  { "Question": "agar", "RightAnswer": "если", "options": ["or","but","and"] },
-  { "Question": "bir", "RightAnswer": "один", "options": ["second","master","fashion"] },
-  { "Question": "bo'lardi", "RightAnswer": "был бы", "options": ["will","hello","hi"] },
+  
   { "Question": "haqida", "RightAnswer": "о", "options": ["by","from","at"] },
   { "Question": "qila olmoq, mumkin", "RightAnswer": "мочь", "options": ["ought","must","might"] },
   { "Question": "qaysi", "RightAnswer": "который", "options": ["mine","neither","none"] },
@@ -13612,4 +13577,5 @@ const questions = {
             ]
 
         }
+
 
