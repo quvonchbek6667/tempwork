@@ -2,22 +2,22 @@ const questions = {
             "level 1": [
                 {
                     "Question": "shu, o’sha",
-                    "RightAnswer": "the",
+                    "RightAnswer": "во всо ",
                     "options": ["wherever","nowhere","anymore"]
                 },
                 {
                     "Question": "bo'lmoq",
-                    "RightAnswer": "be",
+                    "RightAnswer": "втициышвш",
                     "options": ["what","which","mine"]
                 },
                 {
                     "Question": "va",
-                    "RightAnswer": "and",
+                    "RightAnswer": "воисшви",
                     "options": ["a","the","wherever"]
                 },
                 {
                     "Question": "ning",
-                    "RightAnswer": "of",
+                    "RightAnswer": "воимшв",
                     "options": ["one","second","master"]
                 },
                 {
@@ -14045,4 +14045,5 @@ const questions = {
                     "options": ["hunger","noun","holder"]
                 }
             ]
+
         }
