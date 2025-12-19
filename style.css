@@ -1,0 +1,347 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #ffffff, #f2f2f2);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+h1, h2 {
+    color: #333333;
+    margin-bottom: 20px;
+    text-shadow: none;
+}
+
+#levels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.level-button {
+    background: linear-gradient(145deg, #e0e0e0, #ffffff);
+    color: #333333;
+    font-size: 30px;
+    width: 80px;
+    height: 80px;
+    border-radius: 20%;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    position: relative;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.level-button:hover {
+    background: linear-gradient(145deg, #d0d0d0, #ffffff);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #bbb;
+}
+
+.level-button:disabled {
+    background: #eeeeee;
+    cursor: not-allowed;
+    opacity: 0.5;
+    box-shadow: none;
+}
+
+.lock-icon {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 18px;
+    color: #666666;
+}
+
+#question-container {
+    margin-bottom: 20px;
+}
+
+#question-number {
+    font-size: 18px;
+    color: #777777;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#question-text {
+    background: linear-gradient(145deg, #ffffff 0%, #f9f9f9 100%);
+    color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
+    box-shadow: 0 0 5px #ccc, 0 0 10px #ddd, inset 0 0 5px #eee;
+    border: 2px solid #ddd;
+}
+
+#options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+}
+
+.option-button {
+    background: linear-gradient(145deg, #ffffff 0%, #f2f2f2 100%);
+    color: #333333;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 30px;
+    width: 100%;
+    max-width: 200px;
+    height: 100px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.option-button:hover {
+    background: linear-gradient(145deg, #eeeeee, #ffffff);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ccc;
+}
+
+.correct {
+    background-color: #28a745 !important;
+    color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+.wrong {
+    background-color: #dc3545 !important;
+    color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+#timer-container {
+    width: 100%;
+    background-color: #dddddd;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#timer-bar {
+    height: 100%;
+    width: 100%;
+    background-color: #6c63ff;
+    transition: width 1s linear, box-shadow 0.5s;
+    box-shadow: 0 0 20px #6c63ff, 0 0 40px #6c63ff, 0 0 60px #6c63ff;
+}
+
+.red-flash {
+    animation: flashRed 0.5s infinite alternate;
+}
+
+@keyframes flashRed {
+    from {
+        background-color: #ff0000;
+        box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000;
+    }
+    to {
+        background-color: #ff9999;
+        box-shadow: 0 0 20px #ff9999, 0 0 40px #ff9999, 0 0 60px #ff9999;
+    }
+}
+
+.red-glow * {
+    color: #ff0000 !important;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000 !important;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000 !important;
+    border-color: #ff0000 !important;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(-45deg, #0a0a0a, #1a1a1a, #2a2a2a, #0a0a0a);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    color: white;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #ffffff;
+    text-shadow: 0 0 8px #ffffff;
+}
+
+body.dark-mode .level-button {
+    background: linear-gradient(145deg, #222222, #111111);
+    color: #ffffff;
+    border: 2px solid #555;
+    box-shadow: 0 0 5px #ffffff66, 0 0 10px #ffffff33;
+}
+
+body.dark-mode .level-button:hover {
+    background: linear-gradient(145deg, #333333, #222222);
+    box-shadow: 0 0 10px #ffffffaa;
+}
+
+body.dark-mode #question-text {
+    background: linear-gradient(145deg, #0a0a0a 0%, #1a1a1a 100%);
+    color: #ffffff;
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, inset 0 0 5px #000000;
+    border: 2px solid #555;
+}
+
+body.dark-mode .option-button {
+    background: linear-gradient(145deg, #0a0a0a 0%, #1a1a1a 100%);
+    color: #ffffff;
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, inset 0 0 5px #000000;
+}
+
+body.dark-mode .option-button:hover {
+    background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+    box-shadow: 0 0 15px #ffffff99;
+}
+
+body.dark-mode #timer-container {
+    background-color: #333333;
+}
+
+body.dark-mode #timer-bar {
+    background-color: #f7f9f7;
+    box-shadow: 0 0 20px #f7f9f7, 0 0 40px #f7f9f7, 0 0 60px #f7f9f7;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.4s;
+}
+
+.toggle-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 0.4s, background-color 0.4s;
+}
+
+body.dark-mode .toggle-switch {
+    background-color: #555;
+}
+
+body.dark-mode .toggle-thumb {
+    transform: translateX(30px);
+    background-color: #222;
+}
+
+#result button {
+    margin: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #6b63ff1f; /* Purple */
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#result button:hover {
+    background-color: #5954e800;
+}
+
+/* Result Buttons (dark mode) */
+body.dark-mode #result button {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode #result button:hover {
+    background-color: #555;
+}
+
+/* Emoji Buttons */
+#return-button, 
+#retry-button,
+#next-button {
+    font-size: 32px; /* 🎯 Make emojis bigger */
+    cursor: pointer;
+    margin: 10px;
+    padding: 12px 20px; /* match normal buttons */
+    border-radius: 10px;
+    border: none;
+    background-color: #6b63ff16; /* Same purple */
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+/* Emoji Buttons Hover Effect */
+#return-button:hover,
+#retry-button:hover,
+#next-button:hover {
+    transform: scale(1.2);
+    background-color: #5954e814; /* Match hover color */
+}
+
+/* Dark mode for emoji buttons */
+body.dark-mode #return-button,
+body.dark-mode #retry-button,
+body.dark-mode #next-button {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode #return-button:hover,
+body.dark-mode #retry-button:hover,
+body.dark-mode #next-button:hover {
+    background-color: #555;
+}

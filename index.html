@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Quiz</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <meta name="theme-color" content="#6C63FF">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 id="page-title">Choose a Level</h1>
+    <button id="mute-toggle" style="position: fixed; top: 20px; right: 20px; background: none; border: none; font-size: 24px; cursor: pointer;">🔇</button>
+    <div id="level-select">
+        <div id="levels"></div>
+    </div>
+    
+
+    <div id="quiz" style="display: none;">
+        <div id="timer-container">
+            <div id="timer-bar"></div>
+        </div>
+        <div id="timer-text" style="font-size: 20px; color: #444; margin-bottom: 10px; text-align: center;"></div>
+        <div id="question-container">
+            <div id="question-number"></div>
+            <div id="question-text"></div>
+        </div>
+        <div id="options"></div>
+    </div>
+
+    <div id="result"></div>
+    <audio id="correct-sound" src="correct.mp3"></audio>
+    <audio id="wrong-sound" src="wrong.mp3"></audio>
+    <audio id="tick-sound" src="tick.mp3" loop></audio>
+    <audio id="levelup-sound" src="levelup.mp3"></audio>
+
+
+    <!-- THEME TOGGLE BUTTON (must be before scripts) -->
+    <div id="theme-toggle" class="toggle-switch">
+        <div class="toggle-thumb"></div>
+    </div>
+
+    <!-- JavaScript files -->
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
